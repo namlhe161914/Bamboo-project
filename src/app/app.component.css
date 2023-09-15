@@ -102,12 +102,55 @@
     }
   }
 
+
   /* product slide */   
   .card-body{
     text-align: center;
   }
 
+ .cate-slide{
+  width: 95%;
+  background-color: #fafafa;
+}
+
+  .custom-col{
+    padding: 1%;
+    cursor: pointer;
+  }
   
+
+  .custom-col p {
+    margin-top: 2%;
+    color: green;
+    position: relative;
+    text-align: center;
+    
+  }
+
+  .custom-col p::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px; /* Độ dày của gạch chân */
+    bottom: 0;
+    left: 0;
+    background-color: #81d9d4; /* Màu của gạch chân */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease; /* Thời gian và hiệu ứng chuyển đổi */
+}
+
+.custom-col p:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+  .custom-col img{
+    border-radius: 2%;
+    
+  }
+
+  /* product slide */   
 
   @media all and (min-width: 992px) {
     .navbar-nav .nav-link {
